@@ -7,13 +7,24 @@
 //
 
 #import "TSAppDelegate.h"
+#import "TSViewController.h"
 
 @implementation TSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self loadHomePage];
     return YES;
+}
+
+- (void)loadHomePage
+{
+    TSViewController *homePage = [[TSViewController alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homePage];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

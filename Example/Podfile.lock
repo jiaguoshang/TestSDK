@@ -1,16 +1,49 @@
 PODS:
-  - TestSDK (0.1.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - TestSDK (0.1.0):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveCocoa (~> 2.5)
 
 DEPENDENCIES:
+  - AFNetworking (= 3.1.0)
+  - ReactiveCocoa (= 2.5)
   - TestSDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - ReactiveCocoa
 
 EXTERNAL SOURCES:
   TestSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TestSDK: 52cacf20217df8f8c950872e2323da6d365419ce
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  TestSDK: f0de2afdbac49e3e8a883a54f130c4608afd7bb2
 
-PODFILE CHECKSUM: ab0ad1141350ceccce7981e44666123da6f46b6d
+PODFILE CHECKSUM: fd746fc837fce16512421be8bc6639b80aaebed7
 
 COCOAPODS: 1.7.0.beta.2
