@@ -7,17 +7,17 @@
 //
 
 #import "TSViewController.h"
-//#import "ELockSDKSingleObject.h"
+//#import "TestSDKSingleObject.h"
 #import "ReactiveCocoa.h"
 #import "TSCollectionViewCell.h"
 
 // 屏幕宽度
-#define BLSTFullWidth            [[UIScreen mainScreen] bounds].size.width
+#define TSTFullWidth            [[UIScreen mainScreen] bounds].size.width
 
 // 屏幕高度
-#define BLSTFullHeight           [[UIScreen mainScreen] bounds].size.height
-#define BLSTIPhoneEar (BLSTFullWidth == 375 && BLSTFullHeight == 812 ? true : false)
-#define BLSTMainTopHeight  (BLSTIPhoneEar ? 88 : 64)
+#define TSTFullHeight           [[UIScreen mainScreen] bounds].size.height
+#define TSTIPhoneEar (TSTFullWidth == 375 && TSTFullHeight == 812 ? true : false)
+#define TSTMainTopHeight  (TSTIPhoneEar ? 88 : 64)
 
 @interface TSViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -41,7 +41,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     
     //创建CollectionView
-    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, BLSTMainTopHeight-64 , [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height  - BLSTMainTopHeight+64) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, TSTMainTopHeight-64 , [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height  - TSTMainTopHeight+64) collectionViewLayout:flowLayout];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.backgroundColor = [UIColor whiteColor];
@@ -101,7 +101,7 @@
 -(void)testSDKRACSignal
 {
 //    //CB2D35267432
-//    [[ELockSDKSingleObject sharedInstance] openLockWithLockMac:lockMac successBlock:^(id result) {
+//    [[TestSDKSingleObject sharedInstance] openLockWithLockMac:lockMac successBlock:^(id result) {
 //        NSLog(@"testOpenLockWithLockMac result:%@", result);
 //    } failureBlock:^(NSError * _Nullable error) {
 //        NSLog(@"testOpenLockWithLockMac failure:%@", error);
