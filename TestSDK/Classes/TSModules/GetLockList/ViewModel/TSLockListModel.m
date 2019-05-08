@@ -36,6 +36,12 @@
 }
 
 -(void)getLockListWithUserId:(NSString *)userId
+                       token:(NSString *)token
+{
+    NSLog(@"getLockListWithUserId");
+}
+
+-(void)getLockListWithUserId:(NSString *)userId
                      showHUD:(BOOL)showHUD
                 successBlock:(TSSuccessBlock _Nullable)successBlock
                 failureBlock:(TSFailureBlock _Nullable)failureBlock

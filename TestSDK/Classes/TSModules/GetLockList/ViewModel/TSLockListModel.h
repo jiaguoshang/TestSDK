@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
                      showHUD:(BOOL)showHUD
                 successBlock:(TSSuccessBlock _Nullable)successBlock
                 failureBlock:(TSFailureBlock _Nullable)failureBlock;
+-(void)getLockListWithUserId:(NSString *)userId
+                       token:(NSString *)token;
 @end
 
 NS_ASSUME_NONNULL_END

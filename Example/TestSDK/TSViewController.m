@@ -10,6 +10,7 @@
 //#import "TestSDKSingleObject.h"
 #import "ReactiveCocoa.h"
 #import "TSCollectionViewCell.h"
+#import "TestSDKSingleObject.h"
 
 // 屏幕宽度
 #define TSTFullWidth            [[UIScreen mainScreen] bounds].size.width
@@ -31,8 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.testUnitList = [NSMutableArray arrayWithObjects:@"测试主工程使用第三方库",@"测试调用SDK的函数", nil];
-    self.testUnitSelectorList = @[@"testRACSignal", @"testSDKRACSignal"];
+    self.testUnitList = [NSMutableArray arrayWithObjects:@"测试主工程使用第三方库",@"测试调用SDK的函数",@"测试调用SDK的请求接口", nil];
+    self.testUnitSelectorList = @[@"testRACSignal", @"testGetLockListWithUserId", @"testSDKRACSignal"];
     [self configSubViews];
 }
 
@@ -90,6 +91,7 @@
 
 -(void)testRACSignal
 {
+    NSLog(@"testRACSignal");
     [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
@@ -98,14 +100,19 @@
     }];
 }
 
+-(void)testGetLockListWithUserId
+{
+    [[TestSDKSingleObject sharedInstance] getLockListWithUserId:@"18238124046" token:nil];
+
+}
+
 -(void)testSDKRACSignal
 {
-//    //CB2D35267432
-//    [[TestSDKSingleObject sharedInstance] openLockWithLockMac:lockMac successBlock:^(id result) {
-//        NSLog(@"testOpenLockWithLockMac result:%@", result);
-//    } failureBlock:^(NSError * _Nullable error) {
-//        NSLog(@"testOpenLockWithLockMac failure:%@", error);
-//    }];
+    [[TestSDKSingleObject sharedInstance] getLockListWithSuccessBlock:^(id result) {
+        NSLog(@"result:%@", result);
+    } failureBlock:^(NSError * _Nullable error) {
+        NSLog(@"error:%@", error);
+    }];
 }
 
 @end

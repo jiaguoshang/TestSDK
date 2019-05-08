@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)getLockListWithSuccessBlock:(TSSuccessBlock)successBlock
                       failureBlock:(TSFailureBlock)failureBlock;
 
+-(void)getLockListWithUserId:(NSString *)userId
+                       token:(NSString *)token;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -40,4 +40,10 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'AFNetworking', '~> 3.1.0'
   s.dependency 'ReactiveCocoa', '~> 2.5'
+  s.dependency 'YYModel'
+  s.dependency 'YYCategories'
+  s.dependency 'FMDB'
+  s.dependency 'MJExtension'
+  s.dependency 'SDAutoLayout'
+  s.dependency 'SAMKeychain'
 end
