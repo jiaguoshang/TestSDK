@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TSLockListEntity.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 
 @interface TSLockListViewModel : NSObject
 

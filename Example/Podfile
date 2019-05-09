@@ -8,7 +8,7 @@ target 'TestSDK_Example' do
   target 'TestSDK_Tests' do
     inherit! :search_paths
     #RAC响应式编程库
-    pod 'ReactiveCocoa', '2.5'
+    pod 'ReactiveObjC'
     
     ##################################第三方###########################
     #YYModel--数组转模型组件

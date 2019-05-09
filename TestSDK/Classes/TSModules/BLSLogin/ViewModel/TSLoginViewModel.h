@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TSLoginEntity.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 
 @interface TSLoginViewModel : NSObject
 

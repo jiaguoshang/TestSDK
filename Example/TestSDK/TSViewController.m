@@ -8,7 +8,7 @@
 
 #import "TSViewController.h"
 //#import "TestSDKSingleObject.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 #import "TSCollectionViewCell.h"
 #import "TestSDKSingleObject.h"
 

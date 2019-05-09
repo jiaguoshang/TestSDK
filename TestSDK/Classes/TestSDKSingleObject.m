@@ -8,7 +8,7 @@
 
 #import "TestSDKSingleObject.h"
 #import "TSLockListModel.h"
-#import "ReactiveCocoa.h"
+#import "ReactiveObjC.h"
 #import "TSLoginModel.h"
 #import "TSAccountTool.h"
 
