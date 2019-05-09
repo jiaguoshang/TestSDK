@@ -13,7 +13,5 @@
 
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSMutableArray *lockList;
-//@property (nonatomic, assign) BOOL showHUD;
-
 
 @end

@@ -7,18 +7,17 @@
 //
 
 #import "TSViewController.h"
-//#import "TestSDKSingleObject.h"
 #import "ReactiveObjC.h"
 #import "TSCollectionViewCell.h"
 #import "TestSDKSingleObject.h"
 
 // 屏幕宽度
-#define TSTFullWidth            [[UIScreen mainScreen] bounds].size.width
+#define TSFullWidth            [[UIScreen mainScreen] bounds].size.width
 
 // 屏幕高度
-#define TSTFullHeight           [[UIScreen mainScreen] bounds].size.height
-#define TSTIPhoneEar (TSTFullWidth == 375 && TSTFullHeight == 812 ? true : false)
-#define TSTMainTopHeight  (TSTIPhoneEar ? 88 : 64)
+#define TSFullHeight           [[UIScreen mainScreen] bounds].size.height
+#define TSIPhoneEar (TSFullWidth == 375 && TSFullHeight == 812 ? true : false)
+#define TSMainTopHeight  (TSIPhoneEar ? 88 : 64)
 
 @interface TSViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -42,7 +41,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     
     //创建CollectionView
-    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, TSTMainTopHeight-64 , [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height  - TSTMainTopHeight+64) collectionViewLayout:flowLayout];
+    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, TSMainTopHeight-64 , [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height  - TSMainTopHeight+64) collectionViewLayout:flowLayout];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.backgroundColor = [UIColor whiteColor];

@@ -10,10 +10,6 @@
 
 @implementation TSLockListEntity
 
-//- (NSMutableDictionary *)dictionary {
-//    return [self mj_keyValues];
-//}
-
 - (instancetype)init
 {
     self = [super init];

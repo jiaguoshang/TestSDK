@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TSCollectionViewCell : UICollectionViewCell
-
-//@property (nonatomic, strong) UIImageView *productImageV;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) NSString *nameStr;
 
